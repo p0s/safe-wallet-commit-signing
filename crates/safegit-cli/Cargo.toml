@@ -1,0 +1,11 @@
+[package]
+name = "safegit-cli"
+version = "0.1.0"
+edition = "2024"
+
+[[bin]]
+name = "safegit-rs"
+path = "src/main.rs"
+
+[dependencies]
+safegit-frost = { path = "../safegit-frost" }

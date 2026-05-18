@@ -1,0 +1,40 @@
+{
+  "name": "safe-git-threshold",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "packageManager": "pnpm@10.29.3",
+  "scripts": {
+    "dev": "pnpm --filter @safe-git/web dev",
+    "build": "pnpm -r build",
+    "typecheck": "pnpm -r typecheck",
+    "lint": "pnpm -r lint",
+    "test": "pnpm -r test",
+    "test:rust": "cargo test",
+    "demo:frost-keygen": "pnpm build && node scripts/create-frost-ceremony.mjs",
+    "demo:local": "pnpm build && node scripts/demo-local-flow.mjs",
+    "demo:safe-proof": "pnpm --filter @safe-git/core build && node scripts/approve-safe-demo-message.mjs",
+    "demo:safe-proof:3owner": "pnpm --filter @safe-git/core build && node scripts/approve-three-owner-safe-demo-message.mjs",
+    "verify": "pnpm build && pnpm typecheck && pnpm test && pnpm demo:local && pnpm test:rust"
+  },
+  "devDependencies": {
+    "@types/node": "^24.10.1",
+    "tsx": "^4.20.6",
+    "typescript": "^5.9.3",
+    "vercel": "^54.0.0",
+    "vitest": "^4.0.15"
+  },
+  "dependencies": {
+    "@safe-global/protocol-kit": "^7.1.0",
+    "@safe-global/types-kit": "^3.1.0",
+    "next": "^16.2.6",
+    "react": "^19.2.6",
+    "react-dom": "^19.2.6",
+    "viem": "^2.49.0"
+  },
+  "pnpm": {
+    "overrides": {
+      "postcss": "^8.5.14"
+    }
+  }
+}

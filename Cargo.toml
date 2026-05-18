@@ -1,0 +1,8 @@
+[workspace]
+resolver = "3"
+members = [
+  "crates/safegit-cli",
+  "crates/safegit-frost",
+  "crates/safegit-git",
+  "crates/safegit-sshsig"
+]

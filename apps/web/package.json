@@ -1,0 +1,29 @@
+{
+  "name": "@safe-git/web",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "typecheck": "tsc --noEmit",
+    "lint": "tsc --noEmit",
+    "test": "vitest run --passWithNoTests"
+  },
+  "dependencies": {
+    "@safe-git/core": "workspace:*",
+    "@safe-git/db": "workspace:*",
+    "@safe-git/github": "workspace:*",
+    "@safe-git/safe": "workspace:*",
+    "@safe-git/verifier": "workspace:*",
+    "next": "^16.0.7",
+    "react": "^19.2.1",
+    "react-dom": "^19.2.1"
+  },
+  "devDependencies": {
+    "@types/react": "^19.2.7",
+    "@types/react-dom": "^19.2.3",
+    "typescript": "^5.9.3",
+    "vitest": "^4.0.15"
+  }
+}
